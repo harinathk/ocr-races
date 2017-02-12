@@ -8,6 +8,8 @@ server:
 
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: ${vcap.services.ocr-eureka.credentials.uri:http://ocr-eureka.au-syd.mybluemix.net/eureka/}
   instance:

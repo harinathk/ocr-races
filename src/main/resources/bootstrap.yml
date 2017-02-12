@@ -1,3 +1,7 @@
 spring:
   application:
     name: races
+  cloud:
+    config:
+      uri:  ${vcap.services.ocr-config-server.credentials.uri:http://localhost:8888}
+      failFast: true
